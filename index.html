@@ -46,10 +46,17 @@ $(document).ready(function() {
         header: {
             left: 'prev,next today myCustomButton',
             center: 'title',
-            right: 'listYear,month,basicWeek,basicDay'
+            right: 'listMonth,month,basicWeek,basicDay'
         },
+        defaultView: 'listMonth',
         timeFormat: 'H:mm',
-        eventColor: '#ffbf00'
+        eventColor: '#ffbf00',
+        eventRender: function (event, element, view) {
+            if(view.type==="listMonth"){
+                element.find('.fc-list-item-title')
+                       .append('<div>'+event.location+'</div>');
+            }
+        }
     });
 });
 </script>
