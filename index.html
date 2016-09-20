@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eventos de juegos de mesa</title>
+
+    <meta name='description' content='Open source JavaScript jQuery plugin for a full-sized, drag &amp; drop event calendar'>
+    <meta name='keywords' content='calendar, JavaScript, jQuery, events, drag and drop'>
+    <meta name='author' content='Adam Shaw'>
+
+	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel='stylesheet' href='bower_components/fullcalendar/dist/fullcalendar.min.css' />
+
+
+    <script src='bower_components/jquery/dist/jquery.min.js'></script>
+    <script src='bower_components/moment/min/moment.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+    <script src='bower_components/fullcalendar/dist/locale-all.js'></script>
+    <script type='text/javascript' src='bower_components/fullcalendar/dist/gcal.js'></script>
+    
+</head>
+<body>
+
+    <div class="container-fluid">
+        
+	<h1>Eventos de juegos de mesa</h1>
+
+        <div id='calendar'></div>
+        
+    </div>
+    
+    
+<script type='text/javascript'>
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+        googleCalendarApiKey: 'AIzaSyA0lu-0bX0WgnD938oUYKNt2m0NsH30sCU',
+        events: {
+            googleCalendarId: '79stucqe48r74ktgcuc63gikvs@group.calendar.google.com'
+        },
+        locale: 'es',
+        header: {
+            left: 'prev,next today myCustomButton',
+            center: 'title',
+            right: 'listYear,month,basicWeek,basicDay'
+        },
+        timeFormat: 'H:mm',
+        eventColor: '#ffbf00'
+    });
+});
+</script>
+
+
+</body>
+</html>
