@@ -54,8 +54,9 @@ $(document).ready(function() {
         eventRender: function (event, element, view) {
             if(view.type==="listMonth"){
                 element.find('.fc-list-item-title')
-                       .append('<div>'+event.location+'</div>');
+                       .append('<div>'+event.location+'</div>'); 
             }
+            element.find('.fc-list-item-title a').attr('target','_top');
         }
     });
 });
