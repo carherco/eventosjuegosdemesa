@@ -32,6 +32,18 @@
 
         <div id='calendar'></div>
         
+        <div>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Lateral -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:600px"
+                 data-ad-client="ca-pub-8617249373587744"
+                 data-ad-slot="7240583718"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
     </div>
     
     
@@ -48,7 +60,7 @@ $(document).ready(function() {
             center: 'title',
             right: 'listMonth,month,basicWeek,basicDay'
         },
-        defaultView: 'listMonth',
+        defaultView: 'month',
         timeFormat: 'H:mm',
         eventColor: '#ffbf00',
         eventRender: function (event, element, view) {
@@ -56,7 +68,7 @@ $(document).ready(function() {
                 element.find('.fc-list-item-title')
                        .append('<div>'+event.location+'</div>'); 
             }
-            element.find('.fc-list-item-title a').attr('target','_top');
+            element.find('.fc-list-item-title a').attr('target','_blank');
         }
     });
 });
